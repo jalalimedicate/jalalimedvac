@@ -30,7 +30,7 @@ body{
     rgba(14,165,233,0.95),
     rgba(14,165,233,0.95)
   );
-  padding:90px 20px;
+  padding:100px 20px;
   color:white;
 }
 
@@ -43,21 +43,33 @@ body{
   text-align:center;
 }
 
+/* BIGGER LOGO CIRCLE */
+.logo-circle{
+  width:220px;
+  height:220px;
+  background:rgba(255,255,255,0.97);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:26px;
+  box-shadow:0 26px 55px rgba(0,0,0,0.25);
+}
+
 .hero-logo{
-  width:140px;
-  margin-bottom:18px;
+  width:155px;
 }
 
 .hero h1{
-  font-size:38px;
-  margin:0 0 12px;
+  font-size:40px;
+  margin:0 0 14px;
   font-weight:700;
 }
 
 .hero p{
-  font-size:17px;
+  font-size:17.5px;
   color:#e0f2fe;
-  max-width:700px;
+  max-width:720px;
 }
 
 /* ===== TRUST BAR ===== */
@@ -127,7 +139,7 @@ body{
 
 .service-card{
   background:white;
-  padding:40px;
+  padding:42px;
   border-radius:20px;
   box-shadow:0 20px 50px rgba(0,0,0,0.08);
   text-align:center;
@@ -146,7 +158,7 @@ body{
 }
 
 .service-card h3{
-  margin-top:20px;
+  margin-top:22px;
   color:var(--blue-dark);
   font-size:22px;
 }
@@ -213,6 +225,15 @@ footer{
   .hero h1{
     font-size:32px;
   }
+
+  .logo-circle{
+    width:190px;
+    height:190px;
+  }
+
+  .hero-logo{
+    width:135px;
+  }
 }
 </style>
 </head>
@@ -223,7 +244,9 @@ footer{
 <section class="hero">
   <div class="hero-inner">
 
-    <img src="logo.png" alt="Jalali Medicate Logo" class="hero-logo">
+    <div class="logo-circle">
+      <img src="logo.png" alt="Jalali Medicate Logo" class="hero-logo">
+    </div>
 
     <h1>Jalali Medicate Vaccination Center</h1>
 
@@ -238,29 +261,24 @@ footer{
 <!-- TRUST BAR -->
 <section class="trust-bar">
   <div class="trust-grid">
-
     <div class="trust-item">
       <h3>30+</h3>
       <p>Years of Medical Service</p>
     </div>
-
     <div class="trust-item">
       <h3>2024–2025</h3>
       <p>Best Vaccination Center in Kashmir</p>
     </div>
-
     <div class="trust-item">
       <h3>Thousands</h3>
       <p>Families Served with Care</p>
     </div>
-
   </div>
 </section>
 
 <!-- MEDICAL SERVICES -->
 <section class="services-section">
   <div class="section-inner">
-
     <div class="section-title">
       <h2>Medical Services</h2>
       <p>
@@ -270,7 +288,6 @@ footer{
     </div>
 
     <div class="services">
-
       <div class="service-card">
         <h3>Vaccination Services</h3>
         <p>
@@ -294,7 +311,6 @@ footer{
           vaccination planning, nutrition, and general wellness.
         </p>
       </div>
-
     </div>
   </div>
 </section>
@@ -306,7 +322,6 @@ footer{
       <h2>Patient Reviews</h2>
       <p>Verified reviews from Google Maps</p>
     </div>
-
     <div class="elfsight-app-ca805375-b13b-4cc6-931d-48c73ca25c58"></div>
   </div>
 </section>
@@ -315,7 +330,6 @@ footer{
 <section class="section">
   <div class="section-inner">
     <div class="contact-box">
-
       <h2>Book an Appointment</h2>
 
       <a class="phone" href="tel:+919419583030">+91 94195 83030</a>
@@ -333,7 +347,6 @@ footer{
       <a class="btn" href="https://maps.app.goo.gl/Uqon1Tzi2LvXLbKQ8" target="_blank">
         View on Google Maps
       </a>
-
     </div>
   </div>
 </section>
@@ -342,9 +355,10 @@ footer{
   © 2026 Jalali Medicate Vaccination Center. All rights reserved.
 </footer>
 
-<!-- Elfsight Script -->
 <script src="https://static.elfsight.com/platform/platform.js" defer></script>
 
 </body>
 </html>
+
+
 
