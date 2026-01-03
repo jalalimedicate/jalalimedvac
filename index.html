@@ -7,8 +7,8 @@
 
 <style>
 :root{
-  --blue-dark:#0f3d5e;
   --blue:#0ea5e9;
+  --blue-dark:#0f3d5e;
   --blue-soft:#eef6fb;
   --text-dark:#1f2937;
   --text-muted:#4b5563;
@@ -24,55 +24,43 @@ body{
   line-height:1.7;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
-  background:linear-gradient(
-    rgba(14,165,233,0.95),
-    rgba(14,165,233,0.95)
-  );
+  background:linear-gradient(rgba(14,165,233,.95),rgba(14,165,233,.95));
   padding:100px 20px;
+  text-align:center;
   color:white;
 }
 
-.hero-inner{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-}
-
-/* BIGGER LOGO CIRCLE */
 .logo-circle{
   width:220px;
   height:220px;
-  background:rgba(255,255,255,0.97);
+  background:white;
   border-radius:50%;
+  margin:0 auto 25px;
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-bottom:26px;
-  box-shadow:0 26px 55px rgba(0,0,0,0.25);
+  box-shadow:0 25px 55px rgba(0,0,0,.25);
 }
 
-.hero-logo{
+.logo-circle img{
   width:155px;
 }
 
 .hero h1{
   font-size:40px;
-  margin:0 0 14px;
-  font-weight:700;
+  margin-bottom:14px;
 }
 
 .hero p{
-  font-size:17.5px;
-  color:#e0f2fe;
   max-width:720px;
+  margin:auto;
+  color:#e0f2fe;
+  font-size:17px;
 }
 
-/* ===== TRUST BAR ===== */
+/* TRUST */
 .trust-bar{
   background:var(--blue-soft);
   padding:60px 20px;
@@ -87,19 +75,12 @@ body{
   text-align:center;
 }
 
-.trust-item h3{
+.trust-grid h3{
   font-size:32px;
-  margin:0;
   color:var(--blue-dark);
 }
 
-.trust-item p{
-  margin-top:6px;
-  color:var(--text-muted);
-  font-size:15px;
-}
-
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 .section{
   padding:90px 20px;
 }
@@ -114,21 +95,9 @@ body{
   margin-bottom:60px;
 }
 
-.section-title h2{
-  font-size:34px;
-  margin-bottom:10px;
-}
-
-.section-title p{
-  color:var(--text-muted);
-  max-width:620px;
-  margin:auto;
-}
-
-/* ===== SERVICES ===== */
+/* SERVICES */
 .services-section{
   background:var(--blue-soft);
-  padding:100px 20px;
 }
 
 .services{
@@ -139,36 +108,28 @@ body{
 
 .service-card{
   background:white;
-  padding:42px;
+  padding:40px;
   border-radius:20px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.08);
   text-align:center;
-  position:relative;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
 }
 
-.service-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:6px;
-  background:var(--blue);
-  border-radius:20px 20px 0 0;
+/* GALLERY */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
-.service-card h3{
-  margin-top:22px;
-  color:var(--blue-dark);
-  font-size:22px;
+.gallery-grid img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
 }
 
-.service-card p{
-  color:var(--text-muted);
-  font-size:15.5px;
-}
-
-/* ===== CONTACT ===== */
+/* CONTACT */
 .contact-box{
   background:#f1f5f9;
   padding:70px 30px;
@@ -176,9 +137,8 @@ body{
   text-align:center;
 }
 
-.contact-box a.phone{
+.phone{
   display:block;
-  font-size:18px;
   margin:8px 0;
   color:var(--blue-dark);
   font-weight:600;
@@ -196,43 +156,18 @@ body{
   text-decoration:none;
 }
 
-.btn.whatsapp{
-  background:#22c55e;
-}
+.btn.whatsapp{background:#22c55e}
 
-.address{
-  margin-top:26px;
-  font-size:15px;
-  color:var(--text-muted);
-}
-
-/* ===== FOOTER ===== */
 footer{
-  padding:30px;
   text-align:center;
+  padding:30px;
   background:#f3f4f6;
   color:#6b7280;
-  font-size:14px;
 }
 
-/* ===== MOBILE ===== */
 @media(max-width:900px){
-  .trust-grid,
-  .services{
+  .trust-grid,.services,.gallery-grid{
     grid-template-columns:1fr;
-  }
-
-  .hero h1{
-    font-size:32px;
-  }
-
-  .logo-circle{
-    width:190px;
-    height:190px;
-  }
-
-  .hero-logo{
-    width:135px;
   }
 }
 </style>
@@ -242,86 +177,56 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-
-    <div class="logo-circle">
-      <img src="logo.png" alt="Jalali Medicate Logo" class="hero-logo">
-    </div>
-
-    <h1>Jalali Medicate Vaccination Center</h1>
-
-    <p>
-      Providing comprehensive vaccination and dermatology services for children and adults,
-      with a strong focus on safety, medical accuracy, and patient well-being.
-    </p>
-
+  <div class="logo-circle">
+    <img src="logo.png" alt="Clinic Logo">
   </div>
+  <h1>Jalali Medicate Vaccination Center</h1>
+  <p>
+    Providing comprehensive vaccination and dermatology services for children and adults
+    with a strong focus on safety and patient well-being.
+  </p>
 </section>
 
-<!-- TRUST BAR -->
+<!-- TRUST -->
 <section class="trust-bar">
   <div class="trust-grid">
-    <div class="trust-item">
-      <h3>30+</h3>
-      <p>Years of Medical Service</p>
-    </div>
-    <div class="trust-item">
-      <h3>2024–2025</h3>
-      <p>Best Vaccination Center in Kashmir</p>
-    </div>
-    <div class="trust-item">
-      <h3>Thousands</h3>
-      <p>Families Served with Care</p>
-    </div>
+    <div><h3>30+</h3><p>Years of Service</p></div>
+    <div><h3>2024–2025</h3><p>Best in Kashmir</p></div>
+    <div><h3>Thousands</h3><p>Families Served</p></div>
   </div>
 </section>
 
-<!-- MEDICAL SERVICES -->
-<section class="services-section">
+<!-- SERVICES -->
+<section class="section services-section">
   <div class="section-inner">
-    <div class="section-title">
-      <h2>Medical Services</h2>
-      <p>
-        A complete range of preventive and consultative healthcare services,
-        delivered with clinical precision and patient-focused care.
-      </p>
-    </div>
-
+    <div class="section-title"><h2>Medical Services</h2></div>
     <div class="services">
-      <div class="service-card">
-        <h3>Vaccination Services</h3>
-        <p>
-          Childhood and adult immunization programs provided according to
-          recommended schedules for safe and effective disease prevention.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>Dermatology Services</h3>
-        <p>
-          Professional consultation and treatment for skin, acne, hair loss,
-          allergies, and common dermatological conditions.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>Parenting Guidance</h3>
-        <p>
-          Trusted medical guidance for parents on child health, growth milestones,
-          vaccination planning, nutrition, and general wellness.
-        </p>
-      </div>
+      <div class="service-card">Vaccination Services</div>
+      <div class="service-card">Dermatology Services</div>
+      <div class="service-card">Parenting Guidance</div>
     </div>
   </div>
 </section>
 
-<!-- GOOGLE REVIEWS -->
+<!-- GALLERY -->
 <section class="section">
   <div class="section-inner">
-    <div class="section-title">
-      <h2>Patient Reviews</h2>
-      <p>Verified reviews from Google Maps</p>
+    <div class="section-title"><h2>Clinic Gallery</h2></div>
+    <div class="gallery-grid">
+      <img src="clinic-1.jpg">
+      <img src="clinic-2.jpg">
+      <img src="clinic-3.jpg">
+      <img src="clinic-4.jpg">
+      <img src="clinic-5.jpg">
+      <img src="clinic-6.jpg">
     </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section">
+  <div class="section-inner">
+    <h2 style="text-align:center">Patient Reviews</h2>
     <div class="elfsight-app-ca805375-b13b-4cc6-931d-48c73ca25c58"></div>
   </div>
 </section>
@@ -330,35 +235,21 @@ footer{
 <section class="section">
   <div class="section-inner">
     <div class="contact-box">
-      <h2>Book an Appointment</h2>
-
+      <h2>Book Appointment</h2>
       <a class="phone" href="tel:+919419583030">+91 94195 83030</a>
       <a class="phone" href="tel:+919906756875">+91 99067 56875</a>
-
-      <a class="btn whatsapp" href="https://wa.me/919419583030">
-        Book via WhatsApp
-      </a>
-
-      <div class="address">
-        Sulieman Complex, 13, Dalgate Footbridge,<br>
-        Munshi Bagh, Srinagar, Jammu and Kashmir – 190001
-      </div>
-
-      <a class="btn" href="https://maps.app.goo.gl/Uqon1Tzi2LvXLbKQ8" target="_blank">
-        View on Google Maps
-      </a>
+      <a class="btn whatsapp" href="https://wa.me/919419583030">WhatsApp</a>
+      <p>Sulieman Complex, Dalgate Footbridge, Srinagar</p>
     </div>
   </div>
 </section>
 
-<footer>
-  © 2026 Jalali Medicate Vaccination Center. All rights reserved.
-</footer>
+<footer>© 2026 Jalali Medicate Vaccination Center</footer>
 
 <script src="https://static.elfsight.com/platform/platform.js" defer></script>
-
 </body>
 </html>
+
 
 
 
